@@ -1,0 +1,191 @@
+$container-width: 70%;
+
+@mixin main-container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@900&family=Squada+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+header {
+  .container {
+    @include main-container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 57px;
+
+    .logo {
+      display: flex;
+
+      svg {
+        border-radius: 50% 0;
+      }
+      .title {
+        margin-left: 8px;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-family: "Squada One";
+        font-weight: 400;
+        color: black;
+        text-decoration: none;
+      }
+    }
+
+    .page {
+      margin: 0 20px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+main {
+  flex: 1 1 auto;
+  @include main-container;
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+
+    margin: 100px 0;
+
+    width: 50%;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 48px;
+      line-height: 58px;
+    }
+
+    p {
+      margin: 5px 0 20px;
+    }
+
+    .contact-btn {
+      width: fit-content;
+      padding: 0.5rem 2rem;
+
+      text-transform: uppercase;
+      text-decoration: none;
+
+      color: white;
+      background-color: #E05124;
+      box-shadow: 0 8px 30px rgba(224, 81, 36, 0.4);
+    }
+  }
+
+  section {
+    h2.title {
+      font-weight: 800;
+      font-size: 24px;
+    }
+
+    .content {
+      display: flex;
+      column-gap: 15px;
+      margin-top: 40px;
+
+      .card {
+        box-shadow: 0 20px 100px rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+
+        .title {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          padding: 32px;
+          row-gap: 32px;
+
+          h2 {
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 32px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .price {
+          padding: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          background-color: rgba(0, 0, 0, 0.05);
+
+          font-size: 40px;
+          font-weight: 700;
+          color: #E05124;
+        }
+
+        ul {
+          list-style: none;
+
+          li {
+            padding: 13px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            font-size: 14px;
+
+            .icon {
+              width: 22px;
+              height: 22px;
+              border-radius: 50%;
+              position: relative;
+            }
+          }
+
+          li:nth-child(2n) {
+            background-color: rgba(0, 0, 0, 0.05);
+          }
+
+          li.yes {
+            color: #32870A;
+
+            .icon {
+              background-color: #33C626;
+              -webkit-mask-image: url("/data/icons/check-mark.svg");
+              mask-image: url("/data/icons/check-mark.svg")
+            }
+          }
+
+          li.no {
+            color: #E05124;
+
+            .icon {
+              background-color: #E05124;
+              -webkit-mask-image: url("/data/icons/x-mark.svg");
+              mask-image: url("/data/icons/x-mark.svg")
+            }
+          }
+        }
+      }
+    }
+  }
+}
