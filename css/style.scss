@@ -1,11 +1,12 @@
 $container-width: 70%;
+$main-grad: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
 
 @mixin main-container {
   width: 75%;
   margin: 0 auto;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@900&family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto:wght@900&family=Squada+One&display=swap');
 
 * {
   margin: 0;
@@ -23,6 +24,34 @@ p {
   color: rgba(0, 0, 0, 0.7);
 }
 
+header, footer {
+  .logo {
+    display: flex;
+
+    svg {
+      border-radius: 50% 0;
+    }
+    .title {
+      margin-left: 8px;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-family: "Squada One";
+      font-weight: 400;
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+  .page {
+    margin: 0 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+  }
+}
+
 header {
   .container {
     @include main-container;
@@ -30,32 +59,6 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 57px;
-
-    .logo {
-      display: flex;
-
-      svg {
-        border-radius: 50% 0;
-      }
-      .title {
-        margin-left: 8px;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-family: "Squada One";
-        font-weight: 400;
-        color: black;
-        text-decoration: none;
-      }
-    }
-
-    .page {
-      margin: 0 20px;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 700;
-      text-decoration: none;
-      color: black;
-    }
   }
 }
 
@@ -64,7 +67,7 @@ main {
   @include main-container;
 
   section {
-    margin: 100px 0;
+    margin: 150px 0;
 
     h2.title {
       font-weight: 800;
@@ -234,7 +237,7 @@ main {
     }
 
     .card.special {
-      background: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
+      background: $main-grad;
       color: white;
 
       p {
@@ -269,7 +272,7 @@ main {
       .card {
         position: relative;
         padding: 36px 32px;
-        background: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
+        background: $main-grad;
         color: white;
 
         .text {
@@ -304,5 +307,101 @@ main {
         }
       }
     }
+  }
+
+  .users {
+    box-shadow: 0 16px 100px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    font-family: "Open Sans";
+    border-radius: 5px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    .table {
+      display: flex;
+      margin-top: 40px;
+
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      width: 100%;
+      min-height: 535px;
+
+      font-size: 12px;
+      line-height: 16px;
+
+      .column {
+        flex: 1 1 auto;
+
+        .head, .cell {
+          height: 55px;
+          display: flex;
+          padding: 10px 20px;
+          box-sizing: border-box;
+
+          border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+        .head {
+          align-items: flex-end;
+          color: rgba(0, 0, 0, 0.5);
+        }
+
+        .cell {
+          align-items: center;
+          font-size: 10px;
+          line-height: 14px;
+
+          .text {
+            display: flex;
+            flex-direction: column;
+
+            .addition {
+              color: rgba(0, 0, 0, 0.5);
+            }
+          }
+
+          .status.active {
+              color: #3CC13B;
+          }
+        }
+
+        .user {
+          img {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: $main-grad;
+
+  .container {
+    @include main-container;
+    height: 99px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: white;
+
+    .left {
+      display: flex;
+
+      .title {
+        color: white;
+      }
+
+      .copyright {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .page {
+    color: white;
   }
 }

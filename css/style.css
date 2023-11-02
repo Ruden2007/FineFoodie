@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@900&family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto:wght@900&family=Squada+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,21 +15,13 @@ p {
   color: rgba(0, 0, 0, 0.7);
 }
 
-header .container {
-  width: 75%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 57px;
-}
-header .container .logo {
+header .logo, footer .logo {
   display: flex;
 }
-header .container .logo svg {
+header .logo svg, footer .logo svg {
   border-radius: 50% 0;
 }
-header .container .logo .title {
+header .logo .title, footer .logo .title {
   margin-left: 8px;
   text-transform: uppercase;
   font-size: 18px;
@@ -38,7 +30,7 @@ header .container .logo .title {
   color: black;
   text-decoration: none;
 }
-header .container .page {
+header .page, footer .page {
   margin: 0 20px;
   text-transform: uppercase;
   font-size: 12px;
@@ -47,13 +39,22 @@ header .container .page {
   color: black;
 }
 
+header .container {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 57px;
+}
+
 main {
   flex: 1 1 auto;
   width: 75%;
   margin: 0 auto;
 }
 main section {
-  margin: 100px 0;
+  margin: 150px 0;
 }
 main section h2.title {
   font-weight: 800;
@@ -235,6 +236,81 @@ main .diet .content .card img {
   bottom: 0;
   transform: translateX(27%);
   height: 115%;
+}
+main .users {
+  box-shadow: 0 16px 100px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  font-family: "Open Sans";
+  border-radius: 5px;
+}
+main .users h2 {
+  font-size: 20px;
+}
+main .users .table {
+  display: flex;
+  margin-top: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 535px;
+  font-size: 12px;
+  line-height: 16px;
+}
+main .users .table .column {
+  flex: 1 1 auto;
+}
+main .users .table .column .head, main .users .table .column .cell {
+  height: 55px;
+  display: flex;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+main .users .table .column .head {
+  align-items: flex-end;
+  color: rgba(0, 0, 0, 0.5);
+}
+main .users .table .column .cell {
+  align-items: center;
+  font-size: 10px;
+  line-height: 14px;
+}
+main .users .table .column .cell .text {
+  display: flex;
+  flex-direction: column;
+}
+main .users .table .column .cell .text .addition {
+  color: rgba(0, 0, 0, 0.5);
+}
+main .users .table .column .cell .status.active {
+  color: #3CC13B;
+}
+main .users .table .column .user img {
+  margin-right: 20px;
+}
+
+footer {
+  background: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
+}
+footer .container {
+  width: 75%;
+  margin: 0 auto;
+  height: 99px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+footer .container .left {
+  display: flex;
+}
+footer .container .left .title {
+  color: white;
+}
+footer .container .left .copyright {
+  margin-left: 40px;
+}
+footer .page {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
