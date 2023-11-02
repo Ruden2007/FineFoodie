@@ -138,16 +138,16 @@ main section .content .card ul li.yes {
 }
 main section .content .card ul li.yes .icon {
   background-color: #33C626;
-  -webkit-mask-image: url("/data/icons/check-mark.svg");
-  mask-image: url("/data/icons/check-mark.svg");
+  -webkit-mask-image: url("../data/icons/check-mark.svg");
+  mask-image: url("../data/icons/check-mark.svg");
 }
 main section .content .card ul li.no {
   color: #E05124;
 }
 main section .content .card ul li.no .icon {
   background-color: #E05124;
-  -webkit-mask-image: url("/data/icons/x-mark.svg");
-  mask-image: url("/data/icons/x-mark.svg");
+  -webkit-mask-image: url("../data/icons/x-mark.svg");
+  mask-image: url("../data/icons/x-mark.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

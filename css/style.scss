@@ -170,8 +170,8 @@ main {
 
             .icon {
               background-color: #33C626;
-              -webkit-mask-image: url("/data/icons/check-mark.svg");
-              mask-image: url("/data/icons/check-mark.svg")
+              -webkit-mask-image: url("../data/icons/check-mark.svg");
+              mask-image: url("../data/icons/check-mark.svg")
             }
           }
 
@@ -180,8 +180,8 @@ main {
 
             .icon {
               background-color: #E05124;
-              -webkit-mask-image: url("/data/icons/x-mark.svg");
-              mask-image: url("/data/icons/x-mark.svg")
+              -webkit-mask-image: url("../data/icons/x-mark.svg");
+              mask-image: url("../data/icons/x-mark.svg")
             }
           }
         }
