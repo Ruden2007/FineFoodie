@@ -1,4 +1,12 @@
+/*
+* Prefixed by:
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto:wght@900&family=Squada+One&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +14,12 @@
 
 body {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   font-family: Montserrat;
 }
@@ -16,6 +29,8 @@ p {
 }
 
 header .logo, footer .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 header .logo svg, footer .logo svg {
@@ -42,13 +57,21 @@ header .page, footer .page {
 header .container {
   width: 75%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 57px;
 }
 
 main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   width: 75%;
   margin: 0 auto;
@@ -61,16 +84,26 @@ main section h2.title {
   font-size: 24px;
 }
 main section .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-column-gap: 15px;
+  -moz-column-gap: 15px;
   column-gap: 15px;
   margin-top: 40px;
 }
 main section .content .card {
+  -webkit-box-shadow: 0 20px 100px rgba(0, 0, 0, 0.2);
   box-shadow: 0 20px 100px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
 }
 main .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 50%;
 }
@@ -83,16 +116,20 @@ main .contact p {
   margin: 5px 0 20px;
 }
 main .contact .contact-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0.5rem 2rem;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
   background-color: #E05124;
+  -webkit-box-shadow: 0 8px 30px rgba(224, 81, 36, 0.4);
   box-shadow: 0 8px 30px rgba(224, 81, 36, 0.4);
 }
 main .what {
   padding: 38px 24px;
+  -webkit-box-shadow: 0 16px 100px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 16px 100px 0 rgba(0, 0, 0, 0.2);
   position: relative;
 }
@@ -113,9 +150,18 @@ main .what img {
   right: 0;
 }
 main .subscriptions .card .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 32px;
   row-gap: 32px;
@@ -130,8 +176,14 @@ main .subscriptions .card .title p {
 }
 main .subscriptions .card .price {
   padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.05);
   font-size: 40px;
@@ -154,8 +206,14 @@ main .subscriptions .card ul {
 }
 main .subscriptions .card ul li {
   padding: 13px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   font-size: 14px;
 }
@@ -185,6 +243,7 @@ main .subscriptions .card ul li.no .icon {
   mask-image: url("../data/icons/x-mark.svg");
 }
 main .subscriptions .card.special {
+  background: -o-linear-gradient(305.36deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
   background: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
   color: white;
 }
@@ -204,13 +263,16 @@ main .subscriptions .card.special ul li:nth-child(2n) {
   background-color: rgba(255, 255, 255, 0.2);
 }
 main .diet .content {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   row-gap: 30px;
 }
 main .diet .content .card {
   position: relative;
   padding: 36px 32px;
+  background: -o-linear-gradient(305.36deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
   background: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
   color: white;
 }
@@ -234,10 +296,13 @@ main .diet .content .card img {
   position: absolute;
   right: 0;
   bottom: 0;
+  -webkit-transform: translateX(27%);
+  -ms-transform: translateX(27%);
   transform: translateX(27%);
   height: 115%;
 }
 main .users {
+  -webkit-box-shadow: 0 16px 100px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 16px 100px 0 rgba(0, 0, 0, 0.2);
   padding: 20px;
   font-family: "Open Sans";
@@ -247,6 +312,8 @@ main .users h2 {
   font-size: 20px;
 }
 main .users .table {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 40px;
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -256,26 +323,40 @@ main .users .table {
   line-height: 16px;
 }
 main .users .table .column {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 main .users .table .column .head, main .users .table .column .cell {
   height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 10px 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 main .users .table .column .head {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   color: rgba(0, 0, 0, 0.5);
 }
 main .users .table .column .cell {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 10px;
   line-height: 14px;
 }
 main .users .table .column .cell .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 main .users .table .column .cell .text .addition {
@@ -289,18 +370,27 @@ main .users .table .column .user img {
 }
 
 footer {
+  background: -o-linear-gradient(305.36deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
   background: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
 }
 footer .container {
   width: 75%;
   margin: 0 auto;
   height: 99px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: white;
 }
 footer .container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 footer .container .left .title {
@@ -312,5 +402,3 @@ footer .container .left .copyright {
 footer .page {
   color: white;
 }
-
-/*# sourceMappingURL=style.css.map */
